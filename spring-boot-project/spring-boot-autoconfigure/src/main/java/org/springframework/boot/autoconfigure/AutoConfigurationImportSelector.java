@@ -68,6 +68,13 @@ import org.springframework.util.StringUtils;
  * @author Madhura Bhave
  * @since 1.3.0
  * @see EnableAutoConfiguration
+ *
+ * 当前配置类导入另外的 N 个自动配置类。
+ *
+ *
+ * AutoConfigurationImportSelector 的 selectImports 就是用来返回需要导入的组件的全类名数组的
+ *
+ *
  */
 public class AutoConfigurationImportSelector implements DeferredImportSelector, BeanClassLoaderAware,
 		ResourceLoaderAware, BeanFactoryAware, EnvironmentAware, Ordered {
@@ -166,6 +173,11 @@ public class AutoConfigurationImportSelector implements DeferredImportSelector, 
 	 * @param attributes the {@link #getAttributes(AnnotationMetadata) annotation
 	 * attributes}
 	 * @return a list of candidate configurations
+	 *
+	 * loadFactoryNames() 方法传入了 EnableAutoConfiguration.class 这个参数
+	 *
+	 * # TODO SpringBoot 自动配置原理
+	 *
 	 */
 	protected List<String> getCandidateConfigurations(AnnotationMetadata metadata, AnnotationAttributes attributes) {
 		List<String> configurations = SpringFactoriesLoader.loadFactoryNames(getSpringFactoriesLoaderFactoryClass(),

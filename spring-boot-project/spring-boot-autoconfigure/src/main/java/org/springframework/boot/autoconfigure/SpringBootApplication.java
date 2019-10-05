@@ -43,6 +43,19 @@ import org.springframework.data.repository.Repository;
  * @author Phillip Webb
  * @author Stephane Nicoll
  * @since 1.2.0
+ *
+ * 这个类是 SpringBoot 的主配置类。
+ *
+ * SpringBoot 就应该运行这个类的 main 方法来启动 SpringBoot 应用。
+ *
+ * @SpringBootConfiguration：   该注解表示这是一个 SpringBoot 的配置类，其实它就是一个 @Configuration 注解而已。
+ *
+ * @ComponentScan： 开启组件扫描。
+ *
+ * @EnableAutoConfiguration： 自动配置的奥秘全都在这个注解里面。
+ *
+ * 查看 @EnableAutoConfiguration
+ *
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
