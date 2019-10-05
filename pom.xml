@@ -26,6 +26,7 @@
 			<properties>
 				<spring-javaformat.version>0.0.15</spring-javaformat.version>
 				<nohttp-checkstyle.version>0.0.3.RELEASE</nohttp-checkstyle.version>
+				<disable.checks>false</disable.checks>
 			</properties>
 			<build>
 				<plugins>
@@ -217,37 +218,7 @@
 			<plugins>
 				<!--This plugin's configuration is used to store Eclipse m2e settings
 					only. It has no influence on the Maven build itself. -->
-				<plugin>
-					<groupId>org.eclipse.m2e</groupId>
-					<artifactId>lifecycle-mapping</artifactId>
-					<version>1.0.0</version>
-					<configuration>
-						<lifecycleMappingMetadata>
-							<pluginExecutions>
-								<pluginExecution>
-									<pluginExecutionFilter>
-										<groupId>
-											org.jetbrains.kotlin
-										</groupId>
-										<artifactId>
-											kotlin-maven-plugin
-										</artifactId>
-										<versionRange>
-											[1.1.51,)
-										</versionRange>
-										<goals>
-											<goal>compile</goal>
-											<goal>test-compile</goal>
-										</goals>
-									</pluginExecutionFilter>
-									<action>
-										<ignore></ignore>
-									</action>
-								</pluginExecution>
-							</pluginExecutions>
-						</lifecycleMappingMetadata>
-					</configuration>
-				</plugin>
+
 			</plugins>
 		</pluginManagement>
 	</build>
